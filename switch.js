@@ -26,6 +26,11 @@
       document.body.classList.add("text-light");
     }
     
+    // Switch table light to dark
+    document.querySelectorAll("table").forEach((element) => {
+      element.className = element.className.replace(/table-light/g, "table-dark");
+    });
+    
     // set light switch input to true
     if (! lightSwitch.checked) {
       lightSwitch.checked = true;
@@ -49,6 +54,11 @@
     } else {
       document.body.classList.add("text-dark");
     }
+    
+    // Switch table dark to light
+    document.querySelectorAll("table").forEach((element) => {
+      element.className = element.className.replace(/table-dark/g, "table-light");
+    });
     
     if (lightSwitch.checked) {
       lightSwitch.checked = false;
